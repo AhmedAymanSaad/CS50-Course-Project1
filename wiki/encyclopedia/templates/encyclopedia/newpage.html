@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    New Page
+{% endblock %}
+
+{% block body %}
+{% if success %}
+<form action="{% url 'newpage' %}" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" >
+</form>
+{% else %}
+Error, this entry already exists.
+{% endif %}
+{% endblock %}

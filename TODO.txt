@@ -1,0 +1,1 @@
+1. Make the content label in the edit page show up on the top
